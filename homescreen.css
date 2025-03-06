@@ -94,36 +94,43 @@ body {
     font-size: 30px;
 }
 
-/*sessão*/
+/* Sessão */
 .sessao {
     display: flex;
     justify-content: flex-start;
     align-items: center;
     gap: 20px;
     padding: 20px;
-    background: linear-gradient(to bottom right, white 40%, #393968 90%); /* Degradê triangular */
-    height: 100%;
+    background: linear-gradient(to bottom right, white 40%, #393968 90%);
+    height: auto; /* Ajusta a altura automaticamente */
     margin: 60px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    border-radius: 10px; /* Borda arredondada (opcional) */
-    margin-top: 100px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombras suaves (opcional) */
-}
-
-.sessao img {
-    width: 250px;
-    height: auto;
     border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    flex-wrap: wrap; /* Permite que os itens se ajustem na tela quando necessário */
 }
 
+/* Estilo da imagem */
+.sessao img {
+    max-width: 100%; /* Garante que a imagem nunca ultrapasse a largura do contêiner */
+    height: auto; /* Mantém a proporção da imagem */
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+/* Efeito de hover para a imagem */
 .sessao img:hover {
     transform: scale(1.1);
 }
 
+/* Texto dentro da sessão */
 .sessao .texto {
     flex: 1;
+    max-width: 100%; /* Permite que o texto ocupe toda a largura disponível */
+    text-align: center; /* Alinha o texto ao centro */
 }
 
+/* Título da sessão */
 .sessao h1 {
     font-size: 30px;
     margin-bottom: 10px;
@@ -131,35 +138,83 @@ body {
     padding: 10px;
 }
 
+/* Parágrafos dentro da sessão */
 .sessao p {
     font-size: 20px;
     margin-bottom: 10px;
 }
 
+/* Estilo do botão */
 .sessao button {
-    /*background-color: green;
-    border-radius: 5px;
-    font-size: 25px;
-    width: 200px;
-    height: 50px;
-    
-    align-items: center;*/
     color: #0c0d0c;
-    background-color:transparent;
+    background-color: transparent;
     padding: 10px;
     border: 1px solid rgb(14, 13, 13);
-    margin: 12px ;
-    margin-top: 10px;
+    margin: 12px;
     width: 200px;
     border-radius: 5px;
     justify-content: center;
-    margin-left: 250px;
+    margin-left: auto; /* Centraliza o botão */
     flex-wrap: wrap;
+    text-align: center;
 }
 
-.sessao button:hover{
-    /*background-color: #0056b3;*/
+/* Efeito de hover no botão */
+.sessao button:hover {
     background-color: rgb(39, 46, 39);
+}
+
+/* Media Query para telas pequenas (máximo de 768px) */
+@media (max-width: 768px) {
+    .sessao {
+        flex-direction: column; /* Organiza os itens em coluna */
+        align-items: center; /* Centraliza os itens */
+        margin: 20px; /* Reduz as margens */
+        padding: 15px; /* Ajusta o padding */
+    }
+
+    .sessao img {
+        width: 80%; /* Reduz a largura da imagem para 80% da tela */
+        max-width: 300px; /* Limita o tamanho máximo da imagem */
+        margin-bottom: 20px; /* Adiciona um espaço entre a imagem e o texto */
+    }
+
+    .sessao h1 {
+        font-size: 24px; /* Ajusta o tamanho do título */
+    }
+
+    .sessao p {
+        font-size: 18px; /* Ajusta o tamanho do parágrafo */
+    }
+
+    .sessao button {
+        width: 100%; /* Faz o botão ocupar toda a largura disponível */
+        margin-left: 0; /* Remove a margem esquerda */
+    }
+}
+
+/* Media Query para telas menores que 480px (smartphones muito pequenos) */
+@media (max-width: 480px) {
+    .sessao {
+        padding: 10px; /* Reduz o padding para telas muito pequenas */
+    }
+
+    .sessao img {
+        width: 100%; /* Garante que a imagem ocupe a largura inteira */
+        max-width: 250px; /* Limita o tamanho da imagem */
+    }
+
+    .sessao h1 {
+        font-size: 20px; /* Ajusta o tamanho do título */
+    }
+
+    .sessao p {
+        font-size: 16px; /* Ajusta o tamanho do parágrafo */
+    }
+
+    .sessao button {
+        width: 100%; /* Garante que o botão ocupe a largura total */
+    }
 }
 
 
@@ -399,58 +454,6 @@ button.next {
 
 /*Footer*/
 
-               
-
-/*
-.Final{
-    margin-top: 100px;
-    background: linear-gradient(to bottom, #581A1A 70%, #5b5b80 );
-    height: 1200px;
-    width: 100%;
-    color: white;
-    font-size: 19px;
-}
-
-.Final h1 {
-    text-align: center;
-    margin-top: 40px;
-}
-
-.Final p{
-    background-color: #393968;
-    align-items: center;
-    color: white;
-    text-align: center;
-    font-size: 13px;
-}
-
-.inicio{
-    padding: 5px;
-    margin: 40px;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    list-style-type: none;
-    
-}
-
-
-.contatos{
-    display: flex;
-    justify-content: center;
-    padding: 10px;
-    gap: 10px;
-}
-.contatos img{
-    width: 40px;
-}
-
-.inf   {
-
-    display: flex;
-    justify-content: center;
-}*/
-
 .Final {
     margin-top: 100px;
     background: linear-gradient(to bottom, #581A1A 90%, #5b5b80);
@@ -539,4 +542,14 @@ footer {
 
 .numcont p, .e-mail p {
     font-size: 16px;   
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .Final {
+        justify-content: flex-start;
+    }
+    .footer {
+        width: 100%;
+    }
 }
