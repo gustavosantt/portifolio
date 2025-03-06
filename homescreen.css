@@ -1,0 +1,542 @@
+/* Remove as margens e bordas padrão */
+* {
+    border: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* Inclui padding e borda dentro das dimensões */
+}
+
+body{
+
+    background-color: #f0f0f0;
+}
+
+/* Container principal */
+.container {
+    display: flex;
+    flex-direction: column;
+    /* Organiza o conteúdo de cima para baixo */
+    height: 100vh;
+    /* Faz o container ocupar toda a altura da tela */
+}
+
+/* Estilo do Header */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* Garante que o header ocupe toda a largura da tela */
+    background-color: rgb(88, 26, 26);
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* Alinha o título e a navegação verticalmente */
+    padding: 0 20px;
+    /* Mantém o padding nas laterais */
+    z-index: 1000;
+    /* Garante que o header fique sobre os outros elementos */
+}
+
+/* Título do header */
+header h1 {
+    font-size: 24px;
+    color: rgb(238, 231, 231);
+}
+
+/* Estilo da navegação */
+nav ul {
+    list-style-type: none;
+    display: flex;
+    /* Exibe os itens em linha */
+    gap: 20px;
+    /* Espaçamento entre os itens */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: rgb(238, 231, 231);
+    font-size: 18px;
+}
+
+/* Para garantir que o conteúdo não fique atrás do header fixo */
+body {
+    padding-top: 80px;
+    /* Compensa a altura do cabeçalho */
+}
+
+/*Sobre mim .about*/
+
+.about {
+
+    text-align: center;
+    padding: 80px;
+    gap: 10px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background: linear-gradient(to bottom right, rgb(88, 26, 26) 70%, white );
+    /*background: linear-gradient(to bottom right, #e4dddd 30%, #24244d 50%);*/
+    width: 100%;
+    height: 100%;
+    color: white;
+    
+}
+
+.about h2 {
+
+    padding: 10px;
+    font-size: 65px;
+}
+
+.about h3 {
+
+    font-size: 30px;
+}
+
+/*sessão*/
+.sessao {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    background: linear-gradient(to bottom right, white 40%, #393968 90%); /* Degradê triangular */
+    height: 100%;
+    margin: 60px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    border-radius: 10px; /* Borda arredondada (opcional) */
+    margin-top: 100px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombras suaves (opcional) */
+}
+
+.sessao img {
+    width: 250px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.sessao img:hover {
+    transform: scale(1.1);
+}
+
+.sessao .texto {
+    flex: 1;
+}
+
+.sessao h1 {
+    font-size: 30px;
+    margin-bottom: 10px;
+    text-align: center;
+    padding: 10px;
+}
+
+.sessao p {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.sessao button {
+    /*background-color: green;
+    border-radius: 5px;
+    font-size: 25px;
+    width: 200px;
+    height: 50px;
+    
+    align-items: center;*/
+    color: #0c0d0c;
+    background-color:transparent;
+    padding: 10px;
+    border: 1px solid rgb(14, 13, 13);
+    margin: 12px ;
+    margin-top: 10px;
+    width: 200px;
+    border-radius: 5px;
+    justify-content: center;
+    margin-left: 250px;
+    flex-wrap: wrap;
+}
+
+.sessao button:hover{
+    /*background-color: #0056b3;*/
+    background-color: rgb(39, 46, 39);
+}
+
+
+/* Tecnologias */
+.tech {
+    display: flex;
+    justify-content: center; /* Centraliza os cards dentro do contêiner */
+    cursor: pointer;
+    padding: 30px;
+    flex-wrap: wrap; /* Permite que os itens "quebrem" e se ajustem em várias linhas */
+    /*width: 90%; /* Define a largura do contêiner de forma responsiva */
+    max-width: 100%; /* Limite máximo de largura */
+    text-align: center; /* Alinha o título ao centro */
+    background: linear-gradient(to bottom, rgb(88, 26, 26) 30%, rgb(255, 204, 204));
+    
+}
+
+.tech h1 {
+    width: 100%; /* Faz o título ocupar toda a largura disponível */
+    text-align: center;
+    padding: 20px 0; /* Espaçamento superior e inferior do título */
+    font-size: 32px;
+    color: white;
+    font-weight: bold;
+}
+
+/* Cards */
+.Card-front, .Card-back {
+    margin: 20px; /* Ajusta a margem entre os cards */
+    background-color: rgb(211, 189, 189);
+    width: 180px;
+    height: 280px;
+    border-radius: 10px;
+    align-items: center;
+    text-align: center;
+    padding: 30px;
+    transition: transform 0.3s; /* Adiciona uma transição suave para o hover */
+}
+
+.Card-front:hover, .Card-back:hover {
+    transform: scale(1.1);
+}
+
+.Card-front img, .Card-back img {
+    width: 90px;
+    padding: 15px;
+}
+
+/* Media query para telas médias (tablet) */
+@media (max-width: 768px) {
+    .tech {
+        padding: 20px;
+        justify-content: center; /* Garante que os cards fiquem centralizados */
+    }
+
+    /* Cards ocuparão 45% da largura da tela */
+    .Card-front, .Card-back {
+        width: 45%;
+    }
+}
+
+/* Media query para telas pequenas (smartphone) */
+@media (max-width: 480px) {
+    .tech {
+        padding: 10px;
+        justify-content: center; /* Garante que os cards fiquem centralizados */
+    }
+
+    /* Cards ocuparão 100% da largura da tela */
+    .Card-front, .Card-back {
+        width: 100%;
+        margin: 10px 0; /* Espaçamento maior entre os cards */
+    }
+}
+
+
+/*Projetos*/
+.carrossel {
+    display: flex;
+    overflow: hidden; /* Esconde os cards que estão fora da área visível */
+    width: 100%; /* Ajuste conforme necessário */
+    margin: 100px;
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Estilo dos cards */
+.Card-Projeto {
+    min-width: 300px; /* Tamanho de cada card */
+    margin: 0 10px; /* Espaço entre os cards */
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    padding: 20px;
+}
+
+.Card-Projeto .imagem {
+    width: 100%;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+}
+
+.Card-Projeto h4 {
+    margin: 10px 0;
+}
+
+.Card-Projeto p {
+    font-size: 14px;
+}
+
+button {
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+/* Estilo dos botões de navegação */
+button.prev, button.next {
+    position: absolute;
+    top: 50%;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    transform: translateY(-50%);
+}
+
+button.prev {
+    left: 10px;
+}
+
+button.next {
+    right: 10px;
+}
+
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Espaçamento entre os cards */
+    justify-content: center;
+    padding: 20px;
+    filter: brightness(1.2);
+    
+    
+    
+}
+.projects h1 {
+    width: 100%; /* Faz o título ocupar toda a largura disponível */
+    text-align: center;
+    padding: 20px 0; /* Espaçamento superior e inferior do título */
+    font-size: 32px;
+    font-weight: bold;
+}
+.Card-Projeto {
+    width: 280px; /* Largura fixa para os cards */
+    border: 1px solid #ddd; /* Borda fina e sutil */
+    border-radius: 10px; /* Cantos arredondados */
+    overflow: hidden; /* Esconde qualquer conteúdo fora da borda */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombrinha sutil para efeito de profundidade */
+    background-color: #fff;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Efeitos de transição para interatividade */
+}
+
+.Card-Projeto:hover {
+    transform: translateY(-5px); /* Leve elevação do card no hover */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15); /* Sombrinha mais forte no hover */
+}
+
+/* Estilo para a imagem */
+.Card-Projeto .imagem {
+    height: 200px; 
+    background-color: #f0f0f0; 
+    background-image: url('Img/4cb46a28-34fb-4c72-9588-b5ed52b9470f.webp'); 
+    background-size: cover;
+    background-position: center;
+}
+
+/* Estilo para os textos */
+.Card-Projeto h4 {
+    margin: 15px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+}
+
+.Card-Projeto p {
+    margin: 0 15px 15px 15px;
+    font-size: 14px;
+    color: #666;
+    line-height: 1.5;
+}
+
+/* Estilo para o botão */
+.Card-Projeto button {
+    display: block;
+    margin: 0 15px 15px 15px;
+    padding: 10px;
+    background-color: #007BFF; /* Cor de fundo do botão */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.Card-Projeto button:hover {
+    background-color: #0056b3; /* Cor de fundo mais escura no hover */
+}
+ 
+.next  {
+    font-size: 40px;
+    color: none;
+}
+.prev {
+    font-size: 40px;
+    color: none;
+
+}
+/* Responsividade */
+@media (max-width: 768px) {
+    .projects {
+        justify-content: flex-start;
+    }
+    .Card-Projeto {
+        width: 100%;
+    }
+}
+
+
+/*Footer*/
+
+               
+
+/*
+.Final{
+    margin-top: 100px;
+    background: linear-gradient(to bottom, #581A1A 70%, #5b5b80 );
+    height: 1200px;
+    width: 100%;
+    color: white;
+    font-size: 19px;
+}
+
+.Final h1 {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.Final p{
+    background-color: #393968;
+    align-items: center;
+    color: white;
+    text-align: center;
+    font-size: 13px;
+}
+
+.inicio{
+    padding: 5px;
+    margin: 40px;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    list-style-type: none;
+    
+}
+
+
+.contatos{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    gap: 10px;
+}
+.contatos img{
+    width: 40px;
+}
+
+.inf   {
+
+    display: flex;
+    justify-content: center;
+}*/
+
+.Final {
+    margin-top: 100px;
+    background: linear-gradient(to bottom, #581A1A 90%, #5b5b80);
+    height: auto;
+    width: 100%;
+    color: white;
+    font-size: 20px;
+}
+.Final p{
+    background-color: #393968;
+    align-items: center;
+    color: white;
+    text-align: center;
+    font-size: 13px;
+}
+.Final h1 {
+    text-align: center;
+    margin-top: 40px;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+    padding: 40px 20px; /* Adiciona padding para os lados */
+}
+
+.inicio {
+    flex: 1; /* "Início" à esquerda */
+}
+
+.inicio h3 {
+    margin-bottom: 10px;
+}
+
+.inicio ul {
+    padding: 0;
+}
+
+.inicio li {
+    list-style: none;
+    margin: 5px 0;
+}
+
+.inicio a {
+    color: white;
+    text-decoration: none;
+}
+
+.contatos {
+    text-align: center; /* Centraliza "Contato" */
+    flex: 1;
+}
+
+.contatos .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+.contatos img {
+    width: 40px;
+    height: 40px;
+    align-items: left;
+    justify-content: left;
+}
+
+.inf {
+    display: flex;
+    flex-direction: row; /* Organiza as informações na vertical */
+    align-items: flex-end; /* Alinha à direita */
+    gap: 130px;
+}
+
+.numcont, .e-mail {
+    margin: 10px 0;
+    text-align: right;
+    font-size: 10px;
+}
+
+.numcont h3, .e-mail h3 {
+    font-size: 20px;
+
+    margin-bottom: 5px;
+}
+
+.numcont p, .e-mail p {
+    font-size: 16px;   
+}
