@@ -1,14 +1,13 @@
-/* Remove as margens e bordas padrão */
+/* Remover as margens e bordas padrão */
 * {
     border: 0;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* Inclui padding e borda dentro das dimensões */
+    font-family: 'Roboto';
 }
 
-body{
-
+body {
     background-color: #f0f0f0;
 }
 
@@ -16,9 +15,7 @@ body{
 .container {
     display: flex;
     flex-direction: column;
-    /* Organiza o conteúdo de cima para baixo */
     height: 100vh;
-    /* Faz o container ocupar toda a altura da tela */
 }
 
 /* Estilo do Header */
@@ -27,70 +24,56 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    /* Garante que o header ocupe toda a largura da tela */
-    background-color: rgb(88, 26, 26);
+    background-color: white;
     height: 80px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* Alinha o título e a navegação verticalmente */
     padding: 0 20px;
-    /* Mantém o padding nas laterais */
     z-index: 1000;
-    /* Garante que o header fique sobre os outros elementos */
 }
 
 /* Título do header */
 header h1 {
     font-size: 24px;
-    color: rgb(238, 231, 231);
+    color: rgb(24, 24, 24);
 }
 
 /* Estilo da navegação */
 nav ul {
     list-style-type: none;
     display: flex;
-    /* Exibe os itens em linha */
     gap: 20px;
-    /* Espaçamento entre os itens */
 }
 
 nav ul li a {
     text-decoration: none;
-    color: rgb(238, 231, 231);
+    color: rgb(0, 0, 0);
     font-size: 18px;
 }
 
-/* Para garantir que o conteúdo não fique atrás do header fixo */
+/* Ajuste para garantir que o conteúdo não fique atrás do header fixo */
 body {
     padding-top: 80px;
-    /* Compensa a altura do cabeçalho */
 }
 
-/*Sobre mim .about*/
-
+/* Sobre mim .about */
 .about {
-
     text-align: center;
     padding: 80px;
     gap: 10px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    background: linear-gradient(to bottom right, rgb(88, 26, 26) 70%, white );
-    /*background: linear-gradient(to bottom right, #e4dddd 30%, #24244d 50%);*/
+    background: linear-gradient(to bottom right, #061621 70%, white);
     width: 100%;
-    height: 100%;
-    color: white;
-    
+    color: rgb(227, 220, 220);
 }
 
 .about h2 {
-
     padding: 10px;
     font-size: 65px;
 }
 
 .about h3 {
-
     font-size: 30px;
 }
 
@@ -102,18 +85,17 @@ body {
     gap: 20px;
     padding: 20px;
     background: linear-gradient(to bottom right, white 40%, #393968 90%);
-    height: auto; /* Ajusta a altura automaticamente */
+    height: auto;
     margin: 60px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    flex-wrap: wrap; /* Permite que os itens se ajustem na tela quando necessário */
+    flex-wrap: wrap;
 }
 
-/* Estilo da imagem */
 .sessao img {
-    max-width: 100%; /* Garante que a imagem nunca ultrapasse a largura do contêiner */
-    height: auto; /* Mantém a proporção da imagem */
+    max-width: 100%;
+    height: auto;
     border-radius: 10px;
     transition: transform 0.3s ease;
 }
@@ -123,14 +105,12 @@ body {
     transform: scale(1.1);
 }
 
-/* Texto dentro da sessão */
 .sessao .texto {
     flex: 1;
-    max-width: 100%; /* Permite que o texto ocupe toda a largura disponível */
-    text-align: center; /* Alinha o texto ao centro */
+    max-width: 100%;
+    text-align: center;
 }
 
-/* Título da sessão */
 .sessao h1 {
     font-size: 30px;
     margin-bottom: 10px;
@@ -138,13 +118,11 @@ body {
     padding: 10px;
 }
 
-/* Parágrafos dentro da sessão */
 .sessao p {
     font-size: 20px;
     margin-bottom: 10px;
 }
 
-/* Estilo do botão */
 .sessao button {
     color: #0c0d0c;
     background-color: transparent;
@@ -154,8 +132,7 @@ body {
     width: 200px;
     border-radius: 5px;
     justify-content: center;
-    margin-left: auto; /* Centraliza o botão */
-    flex-wrap: wrap;
+    margin-left: auto;
     text-align: center;
 }
 
@@ -164,78 +141,75 @@ body {
     background-color: rgb(39, 46, 39);
 }
 
-/* Media Query para telas pequenas (máximo de 768px) */
+/* Responsividade */
 @media (max-width: 768px) {
     .sessao {
-        flex-direction: column; /* Organiza os itens em coluna */
-        align-items: center; /* Centraliza os itens */
-        margin: 20px; /* Reduz as margens */
-        padding: 15px; /* Ajusta o padding */
+        flex-direction: column;
+        align-items: center;
+        margin: 20px;
+        padding: 15px;
     }
 
     .sessao img {
-        width: 80%; /* Reduz a largura da imagem para 80% da tela */
-        max-width: 300px; /* Limita o tamanho máximo da imagem */
-        margin-bottom: 20px; /* Adiciona um espaço entre a imagem e o texto */
+        width: 80%;
+        max-width: 300px;
+        margin-bottom: 20px;
     }
 
     .sessao h1 {
-        font-size: 24px; /* Ajusta o tamanho do título */
+        font-size: 24px;
     }
 
     .sessao p {
-        font-size: 18px; /* Ajusta o tamanho do parágrafo */
+        font-size: 18px;
     }
 
     .sessao button {
-        width: 100%; /* Faz o botão ocupar toda a largura disponível */
-        margin-left: 0; /* Remove a margem esquerda */
+        width: 100%;
+        margin-left: 0;
     }
 }
 
-/* Media Query para telas menores que 480px (smartphones muito pequenos) */
+/* Responsividade para telas pequenas */
 @media (max-width: 480px) {
     .sessao {
-        padding: 10px; /* Reduz o padding para telas muito pequenas */
+        padding: 10px;
     }
 
     .sessao img {
-        width: 100%; /* Garante que a imagem ocupe a largura inteira */
-        max-width: 250px; /* Limita o tamanho da imagem */
+        width: 100%;
+        max-width: 250px;
     }
 
     .sessao h1 {
-        font-size: 20px; /* Ajusta o tamanho do título */
+        font-size: 20px;
     }
 
     .sessao p {
-        font-size: 16px; /* Ajusta o tamanho do parágrafo */
+        font-size: 16px;
     }
 
     .sessao button {
-        width: 100%; /* Garante que o botão ocupe a largura total */
+        width: 100%;
     }
 }
 
-
-/* Tecnologias */
+/* Cards e Tecnologia */
 .tech {
     display: flex;
-    justify-content: center; /* Centraliza os cards dentro do contêiner */
+    justify-content: center;
     cursor: pointer;
     padding: 30px;
-    flex-wrap: wrap; /* Permite que os itens "quebrem" e se ajustem em várias linhas */
-    /*width: 90%; /* Define a largura do contêiner de forma responsiva */
-    max-width: 100%; /* Limite máximo de largura */
-    text-align: center; /* Alinha o título ao centro */
-    background: linear-gradient(to bottom, rgb(88, 26, 26) 30%, rgb(255, 204, 204));
-    
+    flex-wrap: wrap;
+    max-width: 100%;
+    text-align: center;
+    background: linear-gradient(to bottom, #061621 30%, rgb(255, 204, 204));
 }
 
 .tech h1 {
-    width: 100%; /* Faz o título ocupar toda a largura disponível */
+    width: 100%;
     text-align: center;
-    padding: 20px 0; /* Espaçamento superior e inferior do título */
+    padding: 20px 0;
     font-size: 32px;
     color: white;
     font-weight: bold;
@@ -243,7 +217,7 @@ body {
 
 /* Cards */
 .Card-front, .Card-back {
-    margin: 20px; /* Ajusta a margem entre os cards */
+    margin: 20px;
     background-color: rgb(211, 189, 189);
     width: 180px;
     height: 280px;
@@ -251,7 +225,7 @@ body {
     align-items: center;
     text-align: center;
     padding: 30px;
-    transition: transform 0.3s; /* Adiciona uma transição suave para o hover */
+    transition: transform 0.3s;
 }
 
 .Card-front:hover, .Card-back:hover {
@@ -263,47 +237,41 @@ body {
     padding: 15px;
 }
 
-/* Media query para telas médias (tablet) */
 @media (max-width: 768px) {
     .tech {
         padding: 20px;
-        justify-content: center; /* Garante que os cards fiquem centralizados */
+        justify-content: center;
     }
 
-    /* Cards ocuparão 45% da largura da tela */
     .Card-front, .Card-back {
         width: 45%;
     }
 }
 
-/* Media query para telas pequenas (smartphone) */
 @media (max-width: 480px) {
     .tech {
         padding: 10px;
-        justify-content: center; /* Garante que os cards fiquem centralizados */
+        justify-content: center;
     }
 
-    /* Cards ocuparão 100% da largura da tela */
     .Card-front, .Card-back {
         width: 100%;
-        margin: 10px 0; /* Espaçamento maior entre os cards */
+        margin: 10px 0;
     }
 }
 
-
-/*Projetos*/
+/* Projetos */
 .carrossel {
     display: flex;
-    overflow: hidden; /* Esconde os cards que estão fora da área visível */
-    width: 100%; /* Ajuste conforme necessário */
+    overflow: hidden;
+    width: 100%;
     margin: 100px;
     transition: transform 0.5s ease-in-out;
 }
 
-/* Estilo dos cards */
 .Card-Projeto {
-    min-width: 300px; /* Tamanho de cada card */
-    margin: 0 10px; /* Espaço entre os cards */
+    min-width: 300px;
+    margin: 0 10px;
     background-color: #f0f0f0;
     border-radius: 10px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
@@ -336,7 +304,6 @@ button {
     margin-top: 10px;
 }
 
-/* Estilo dos botões de navegação */
 button.prev, button.next {
     position: absolute;
     top: 50%;
@@ -360,46 +327,43 @@ button.next {
 .projects {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px; /* Espaçamento entre os cards */
+    gap: 20px;
     justify-content: center;
     padding: 20px;
     filter: brightness(1.2);
-    
-    
-    
 }
+
 .projects h1 {
-    width: 100%; /* Faz o título ocupar toda a largura disponível */
+    width: 100%;
     text-align: center;
-    padding: 20px 0; /* Espaçamento superior e inferior do título */
+    padding: 20px 0;
     font-size: 32px;
     font-weight: bold;
 }
+
 .Card-Projeto {
-    width: 280px; /* Largura fixa para os cards */
-    border: 1px solid #ddd; /* Borda fina e sutil */
-    border-radius: 10px; /* Cantos arredondados */
-    overflow: hidden; /* Esconde qualquer conteúdo fora da borda */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombrinha sutil para efeito de profundidade */
+    width: 280px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     background-color: #fff;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Efeitos de transição para interatividade */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 .Card-Projeto:hover {
-    transform: translateY(-5px); /* Leve elevação do card no hover */
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15); /* Sombrinha mais forte no hover */
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
 }
 
-/* Estilo para a imagem */
 .Card-Projeto .imagem {
-    height: 200px; 
-    background-color: #f0f0f0; 
-    background-image: url('Img/4cb46a28-34fb-4c72-9588-b5ed52b9470f.webp'); 
+    height: 200px;
+    background-color: #f0f0f0;
+    background-image: url('Img/4cb46a28-34fb-4c72-9588-b5ed52b9470f.webp');
     background-size: cover;
     background-position: center;
 }
 
-/* Estilo para os textos */
 .Card-Projeto h4 {
     margin: 15px;
     font-size: 20px;
@@ -414,12 +378,11 @@ button.next {
     line-height: 1.5;
 }
 
-/* Estilo para o botão */
 .Card-Projeto button {
     display: block;
     margin: 0 15px 15px 15px;
     padding: 10px;
-    background-color: #007BFF; /* Cor de fundo do botão */
+    background-color: #007BFF;
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -429,46 +392,36 @@ button.next {
 }
 
 .Card-Projeto button:hover {
-    background-color: #0056b3; /* Cor de fundo mais escura no hover */
+    background-color: #0056b3;
 }
- 
-.next  {
-    font-size: 40px;
-    color: none;
-}
-.prev {
-    font-size: 40px;
-    color: none;
 
-}
-/* Responsividade */
+/* Responsividade para a seção de projetos */
 @media (max-width: 768px) {
     .projects {
         justify-content: flex-start;
     }
+
     .Card-Projeto {
         width: 100%;
     }
 }
 
-
-/*Footer*/
-
+/* Footer */
 .Final {
     margin-top: 100px;
     background: linear-gradient(to bottom, #061621 90%, #5b5b80);
-    height: auto;
-    width: 100%;
     color: white;
     font-size: 20px;
+    text-align: center;
 }
-.Final p{
+
+.Final p {
     background-color: #393968;
-    align-items: center;
     color: white;
     text-align: center;
     font-size: 13px;
 }
+
 .Final h1 {
     text-align: center;
     margin-top: 40px;
@@ -477,33 +430,11 @@ button.next {
 footer {
     display: flex;
     align-items: center;
-    padding: 40px 20px; /* Adiciona padding para os lados */
-}
-
-.inicio {
-    flex: 1; /* "Início" à esquerda */
-}
-
-.inicio h3 {
-    margin-bottom: 10px;
-}
-
-.inicio ul {
-    padding: 0;
-}
-
-.inicio li {
-    list-style: none;
-    margin: 5px 0;
-}
-
-.inicio a {
-    color: white;
-    text-decoration: none;
+    padding: 40px 20px;
 }
 
 .contatos {
-    text-align: center; /* Centraliza "Contato" */
+    text-align: center;
     flex: 1;
 }
 
@@ -517,14 +448,12 @@ footer {
 .contatos img {
     width: 40px;
     height: 40px;
-    align-items: left;
-    justify-content: left;
 }
 
 .inf {
     display: flex;
-    flex-direction: row; /* Organiza as informações na vertical */
-    align-items: flex-end; /* Alinha à direita */
+    flex-direction: row;
+    align-items: flex-end;
     gap: 130px;
 }
 
@@ -536,12 +465,11 @@ footer {
 
 .numcont h3, .e-mail h3 {
     font-size: 20px;
-
     margin-bottom: 5px;
 }
 
 .numcont p, .e-mail p {
-    font-size: 16px;   
+    font-size: 16px;
 }
 
 /* Responsividade */
@@ -549,7 +477,8 @@ footer {
     .Final {
         justify-content: flex-start;
     }
-    .footer {
+
+    footer {
         width: 100%;
     }
 }
