@@ -63,8 +63,10 @@ nav li {
 
 nav li:hover {
     background-color: red;
-    width: 80px;
-    height: 50px;
+    border-radius: 10px;
+    transition: none;
+    height: 100%;
+    width: 100%;
 }
 
 /* Sobre mim .about */
@@ -73,7 +75,7 @@ nav li:hover {
     padding: 80px;
     gap: 10px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    background: linear-gradient(to bottom right, #061621 70%, white);
+    background: linear-gradient(to bottom right, #061621 70%, #F5F5DC);
     width: 100%;
     color: rgb(227, 220, 220);
   
@@ -133,14 +135,10 @@ nav li:hover {
 
 /* Imagem com efeito de hover */
 .sessao img {
-    max-width: 100%;
+    max-width: 40%;
     height: auto;
     border-radius: 10px;
     transition: transform 0.3s ease;
-}
-
-.sessao img:hover {
-    transform: scale(1.1);
 }
 
 .sessao .texto {
@@ -157,7 +155,7 @@ nav li:hover {
 }
 
 .sessao p {
-    font-size: 20px;
+    font-size: 15px;
     margin-bottom: 10px;
 }
 
@@ -199,7 +197,7 @@ nav li:hover {
     }
 
     .sessao p {
-        font-size: 18px;
+        font-size: 8px;
     }
 
     .sessao button {
@@ -232,6 +230,8 @@ nav li:hover {
     }
 }
 
+
+
 /* Cards e Tecnologia */
 .tech {
     display: flex;
@@ -241,7 +241,7 @@ nav li:hover {
     flex-wrap: wrap;
     max-width: 100%;
     text-align: center;
-    background: linear-gradient(to bottom, #061621 30%, rgb(255, 204, 204));
+    background: linear-gradient(to bottom, #061621 70%, rgb(214, 207, 207));
 }
 
 .tech h1 {
@@ -337,7 +337,7 @@ nav li:hover {
 
 button {
     padding: 10px;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: #05a168;
     color: white;
     border: none;
     cursor: pointer;
@@ -456,10 +456,11 @@ button.next {
 }
 
 .Final p {
-    background-color: #393968;
+    background-color: black;
     color: white;
     text-align: center;
     font-size: 13px;
+    opacity: 1s;
 }
 
 .Final h1 {
