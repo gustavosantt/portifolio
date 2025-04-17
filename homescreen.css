@@ -94,10 +94,11 @@ nav li:hover {
         display: none;
         flex-direction: column;
         position: absolute;
-        top: 40px;
+        top: 4px;
         left: 0;
         width: 100%;
         background-color: white;
+        color: white;
         padding: 10px 0;
     }
 
@@ -108,7 +109,7 @@ nav li:hover {
 
     .menu-icon {
         display: block;
-        color: black;
+        color: rgb(228, 222, 222);
     }
 
     nav ul li {
@@ -130,19 +131,79 @@ nav li:hover {
 /* Sobre mim .about */
 .about {
     text-align: center;
+    font-size: 60px;
     padding: 80px;
     gap: 10px;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: 'Roboto', sans-serif;
     /*background: linear-gradient(to bottom right, #061621 70%, #F5F5DC);*/
     background: url(Img/Computer\ Code\ GIF\ -\ Computer\ Code\ Decrypting\ -\ Discover\ &\ Share\ GIFs.gif);
     width: 100%;
-    color: rgb(227, 220, 220);
+    color: rgb(253, 250, 250);
     filter: brightness(0.6);
     /* Deixa a imagem mais escura */
     object-fit: cover;
 
 }
+.about span{
+    position: relative;
+}
 
+.about span::before{
+    content: "";
+    color: #ff007b;
+    animation: about 10s infinite;
+}
+
+.about span::after{
+    content: "";
+    position: absolute;
+    height: 100%;
+    border-left: 2px solid #ff007b;
+    right: -10px;
+    animation: cursor .8s infinite, digita 30s steps(80) infinite;
+    width: calc(100% + 15px);
+    background-color: #212121;
+    
+}
+
+@keyframes digita {
+
+    10%, 15%, 30%, 35%, 50%, 55%, 70%, 75%, 90%, 95%{
+        width: 0;
+    }
+    5%, 20%,25%,40%,60%,65%,80%,85%{
+        width: calc(100% + 15px);
+    }
+}
+
+
+@keyframes cursor {
+    0%{
+        border-left: 2px solid #212121;
+
+    }
+}
+
+@keyframes about {
+    0%, 20%{
+        content: "Henrique";
+    }
+    21%, 40%{
+        content: "Gostou do perfil ?";
+    }
+    41%, 60%{
+        content: "Me chame para trocarmos uma ideia";
+    }
+    61%, 80%{
+        content: "Me chame para trocarmos uma ideia";
+    }
+    81%, 100%{
+        content: "Me chame para trocarmos uma ideia";
+    }
+
+}
+
+/* Desativado texto Gustavo
 .about h2 {
     padding: 10px;
     font-size: 65px;
@@ -150,16 +211,39 @@ nav li:hover {
     overflow: hidden;
     border-right: 2px solid black;
     width: 0;
-    animation: typing 4s steps(35, end) forwards, infinite;
+    animation: typing 4s steps(35, end) forwards, blink 0.7s step-end infinite;
+    text-align: center;
+    margin: 0 auto;
+}*/
+
+/* Cursor blink animation */
+@keyframes blink {
+    from, to {
+        border-color: transparent;
+    }
+    50% {
+        border-color: black;
+    }
 }
 
+/* Typing animation */
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 35ch; /* Ajuste esse valor com base no número de caracteres do texto */
+    }
+}
+
+/* Responsividade */
 @media (max-width: 768px) {
     .about h2 {
-        justify-content: flex-start;
-    }
-
-    .about h2 {
-        width: 100%;
+        font-size: 35px;
+        width: 100%; /* Garante que o texto ocupe a tela, mas pode gerar quebra */
+        animation: none; /* Opcional: remove animação no mobile se não ficar bom */
+        white-space: normal; /* Permite quebra de linha no mobile */
+        border: none;
     }
 }
 
