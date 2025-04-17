@@ -96,9 +96,25 @@ nav li:hover {
 .about h2 {
     padding: 10px;
     font-size: 65px;
-
-}
-
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid black;
+    width: 0;
+    animation: typing 4s steps(35, end) forwards,  infinite;
+  }
+  
+  /* Animação de digitação */
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 35ch; /* Ajuste para o número de caracteres */
+    }
+  }
+  
+  
+  
 
 
 .about h3 {
@@ -169,6 +185,7 @@ nav li:hover {
 .sessao p {
     font-size: 15px;
     margin-bottom: 10px;
+    animation: typing 4s steps(35, end) forwards, blink 0.7s step-end infinite;
 }
 
 .sessao button {
