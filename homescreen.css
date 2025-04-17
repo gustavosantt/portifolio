@@ -20,6 +20,7 @@ body {
 }
 
 /* Estilo do Header */
+
 header {
     position: fixed;
     top: 0;
@@ -35,15 +36,23 @@ header {
 }
 
 /* Título do header */
-header h1 {
-    font-size: 24px;
-    color: rgb(24, 24, 24);
-    
+/* Título do header */
+header h1,
+header nav {
+    position: relative;
+    z-index: 2; /* Coloca o conteúdo acima da camada escura */
+    color: rgb(18, 17, 17); /* cor do texto ajustada para contraste */
 }
 
 
 
 /* Estilo da navegação */
+
+header nav a {
+    color: white;
+    text-decoration: none;
+}
+
 nav ul {
     list-style-type: none;
     display: flex;
@@ -75,9 +84,12 @@ nav li:hover {
     padding: 80px;
     gap: 10px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    background: linear-gradient(to bottom right, #061621 70%, #F5F5DC);
+    /*background: linear-gradient(to bottom right, #061621 70%, #F5F5DC);*/
+    background: url(Img/Computer\ Code\ GIF\ -\ Computer\ Code\ Decrypting\ -\ Discover\ &\ Share\ GIFs.gif);
     width: 100%;
     color: rgb(227, 220, 220);
+    filter: brightness(0.6); /* Deixa a imagem mais escura */
+    object-fit: cover;
   
 }
 
@@ -241,7 +253,8 @@ nav li:hover {
     flex-wrap: wrap;
     max-width: 100%;
     text-align: center;
-    background: linear-gradient(to bottom, #061621 70%, rgb(214, 207, 207));
+    background: linear-gradient(to bottom, #061621 70%, #f0f0f0);
+    animation: float 2s ease-in-out infinite;
 }
 
 .tech h1 {
@@ -252,6 +265,16 @@ nav li:hover {
     color: white;
     font-weight: bold;
 }
+
+@keyframes float{
+    0%,100%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-50px);
+    }
+}
+
 
 /* Cards */
 .Card-front, .Card-back {
@@ -301,23 +324,83 @@ nav li:hover {
 }
 
 /* Projetos */
-.carrossel {
+/*.carrossel {
     display: flex;
     overflow: hidden;
     width: 100%;
     margin: 100px;
     transition: transform 0.5s ease-in-out;
 }
+*/
 
-.Card-Projeto {
-    min-width: 300px;
-    margin: 0 10px;
-    background-color: #f0f0f0;
-    border-radius: 10px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-    text-align: center;
+/* Carrossel responsivo */
+.carrossel {
+    display: flex;
+    flex-wrap: wrap;   
+    scroll-snap-type: x mandatory; /* rolagem mais suave */
+    gap: 20px;
     padding: 20px;
 }
+
+
+
+/* Card dentro do carrossel */
+.Card-Projeto {
+    width: 280px; /* Largura inicial do card */
+    flex: 0 0 auto; /* Impede que o card cresça além do conteúdo */
+    transition: width 0.3s ease; /* Transição suave quando o tamanho mudar */
+}
+
+/* Ajustes para telas médias (tablets) */
+@media (max-width: 1024px) {
+    .carrossel {
+        overflow-x: auto; /* Permite rolagem horizontal em telas menores */
+        justify-content: start; /* Alinha os itens ao início */
+    }
+
+    .Card-Projeto {
+        width: 220px; /* Ajusta o tamanho dos cards em tablets */
+    }
+}
+
+/* Ajustes para telas pequenas (celulares em pé) */
+@media (max-width: 768px) {
+    .carrossel {
+        gap: 15px; /* Reduz o espaço entre os cards */
+        padding: 10px; /* Reduz o padding para celular */
+    }
+
+    .Card-Projeto {
+        width: 180px; /* Diminui o tamanho dos cards em telas menores */
+    }
+}
+
+/* Ajustes para telas muito pequenas (celulares em retrato) */
+@media (max-width: 480px) {
+    .carrossel {
+        padding: 10px 5px; /* Ajusta o padding para telas muito pequenas */
+        gap: 10px; /* Diminui o espaçamento entre os cards */
+    }
+
+    .Card-Projeto {
+        width: 150px; /* Ajusta o tamanho dos cards ainda mais para telas pequenas */
+    }
+}
+
+/* Para telas grandes (desktop) */
+@media (min-width: 1024px) {
+    .carrossel {
+        overflow-x: hidden;    /* sem rolagem horizontal em desktop */
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .Card-Projeto {
+        flex: 1 0 250px; /* Flexível, mas com largura mínima de 250px */
+        max-width: 300px; /* Maxima largura de 300px para o card */
+    }
+}
+
 
 .Card-Projeto .imagem {
     width: 100%;
@@ -365,7 +448,7 @@ button.next {
 }
 
 .projects {
-    display: flex;
+    display: grid;
     flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
