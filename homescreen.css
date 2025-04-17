@@ -9,18 +9,19 @@
 
 body {
     background-color: #f0f0f0;
-    padding-top: 80px; /* Ajuste para garantir que o conteúdo não fique atrás do header fixo */
+    padding-top: 80px;
+    /* Ajuste para garantir que o conteúdo não fique atrás do header fixo */
 }
 
 /* Container principal */
 .container {
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    height: 7   0vh;
+    
 }
 
 /* Estilo do Header */
-
 header {
     position: fixed;
     top: 0;
@@ -35,19 +36,15 @@ header {
     z-index: 1000;
 }
 
-/* Título do header */
-/* Título do header */
+/* Título e nav com z-index */
 header h1,
 header nav {
     position: relative;
-    z-index: 2; /* Coloca o conteúdo acima da camada escura */
-    color: rgb(18, 17, 17); /* cor do texto ajustada para contraste */
+    z-index: 2;
+    color: rgb(18, 17, 17);
 }
 
-
-
 /* Estilo da navegação */
-
 header nav a {
     color: white;
     text-decoration: none;
@@ -65,7 +62,7 @@ nav ul li a {
     font-size: 18px;
 }
 
-/* Transição suave e efeitos de hover */
+/* Transição suave e hover */
 nav li {
     transition: background-color 0.3s ease, width 0.3s ease, height 0.3s ease;
 }
@@ -78,6 +75,58 @@ nav li:hover {
     width: 100%;
 }
 
+/* Ícone do menu hamburguer (esconde no desktop) */
+.menu-icon {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 3;
+}
+
+/* Esconde o input checkbox */
+#menu-toggle {
+    display: none;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    nav ul.menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 40px;
+        left: 0;
+        width: 100%;
+        background-color: white;
+        padding: 10px 0;
+    }
+
+    /* Mostra o menu quando o checkbox estiver marcado */
+    #menu-toggle:checked~nav ul.menu {
+        display: flex;
+    }
+
+    .menu-icon {
+        display: block;
+        color: black;
+    }
+
+    nav ul li {
+        text-align: center;
+        padding: 10px 0;
+        border-bottom: 1px solid #ddd;
+    }
+
+    nav {
+        width: 100%;
+    }
+
+    header {
+        flex-wrap: wrap;
+    }
+}
+
+
 /* Sobre mim .about */
 .about {
     text-align: center;
@@ -88,9 +137,10 @@ nav li:hover {
     background: url(Img/Computer\ Code\ GIF\ -\ Computer\ Code\ Decrypting\ -\ Discover\ &\ Share\ GIFs.gif);
     width: 100%;
     color: rgb(227, 220, 220);
-    filter: brightness(0.6); /* Deixa a imagem mais escura */
+    filter: brightness(0.6);
+    /* Deixa a imagem mais escura */
     object-fit: cover;
-  
+
 }
 
 .about h2 {
@@ -100,19 +150,31 @@ nav li:hover {
     overflow: hidden;
     border-right: 2px solid black;
     width: 0;
-    animation: typing 4s steps(35, end) forwards,  infinite;
-  }
-  
-  /* Animação de digitação */
-  @keyframes typing {
+    animation: typing 4s steps(35, end) forwards, infinite;
+}
+
+@media (max-width: 768px) {
+    .about h2 {
+        justify-content: flex-start;
+    }
+
+    .about h2 {
+        width: 100%;
+    }
+}
+
+/* Animação de digitação */
+@keyframes typing {
     from {
-      width: 80%;
+        width: 80%;
     }
+
     to {
-      width: 35ch; /* Ajuste para o número de caracteres */
+        width: 35ch;
+        /* Ajuste para o número de caracteres */
     }
-  }
-  
+}
+
 
 
 .about h3 {
@@ -128,10 +190,11 @@ nav li:hover {
         transform: rotateY(0deg);
         color: red;
     }
+
     to {
         transform: rotateY(360deg);
     }
-    
+
 }
 
 /* Efeito 3D ao passar o mouse */
@@ -283,18 +346,22 @@ nav li:hover {
     font-weight: bold;
 }
 
-@keyframes float{
-    0%,100%{
+@keyframes float {
+
+    0%,
+    100% {
         transform: translateY(0);
     }
-    50%{
+
+    50% {
         transform: translateY(-20px);
     }
 }
 
 
 /* Cards */
-.Card-front, .Card-back {
+.Card-front,
+.Card-back {
     margin: 20px;
     background-color: rgb(211, 189, 189);
     width: 180px;
@@ -308,11 +375,13 @@ nav li:hover {
 
 
 
-.Card-front:hover, .Card-back:hover {
+.Card-front:hover,
+.Card-back:hover {
     transform: scale(1.1);
 }
 
-.Card-front img, .Card-back img {
+.Card-front img,
+.Card-back img {
     width: 90px;
     padding: 15px;
 }
@@ -323,7 +392,8 @@ nav li:hover {
         justify-content: center;
     }
 
-    .Card-front, .Card-back {
+    .Card-front,
+    .Card-back {
         width: 45%;
     }
 }
@@ -334,7 +404,8 @@ nav li:hover {
         justify-content: center;
     }
 
-    .Card-front, .Card-back {
+    .Card-front,
+    .Card-back {
         width: 100%;
         margin: 10px 0;
     }
@@ -353,8 +424,9 @@ nav li:hover {
 /* Carrossel responsivo */
 .carrossel {
     display: flex;
-    flex-wrap: wrap;   
-    scroll-snap-type: x mandatory; /* rolagem mais suave */
+    flex-wrap: wrap;
+    scroll-snap-type: x mandatory;
+    /* rolagem mais suave */
     gap: 20px;
     padding: 20px;
 }
@@ -363,58 +435,73 @@ nav li:hover {
 
 /* Card dentro do carrossel */
 .Card-Projeto {
-    width: 280px; /* Largura inicial do card */
-    flex: 0 0 auto; /* Impede que o card cresça além do conteúdo */
-    transition: width 0.3s ease; /* Transição suave quando o tamanho mudar */
+    width: 280px;
+    /* Largura inicial do card */
+    flex: 0 0 auto;
+    /* Impede que o card cresça além do conteúdo */
+    transition: width 0.3s ease;
+    /* Transição suave quando o tamanho mudar */
 }
 
 /* Ajustes para telas médias (tablets) */
 @media (max-width: 1024px) {
     .carrossel {
-        overflow-x: auto; /* Permite rolagem horizontal em telas menores */
-        justify-content: start; /* Alinha os itens ao início */
+        overflow-x: auto;
+        /* Permite rolagem horizontal em telas menores */
+        justify-content: start;
+        /* Alinha os itens ao início */
     }
 
     .Card-Projeto {
-        width: 220px; /* Ajusta o tamanho dos cards em tablets */
+        width: 220px;
+        /* Ajusta o tamanho dos cards em tablets */
     }
 }
 
 /* Ajustes para telas pequenas (celulares em pé) */
 @media (max-width: 768px) {
     .carrossel {
-        gap: 15px; /* Reduz o espaço entre os cards */
-        padding: 10px; /* Reduz o padding para celular */
+        gap: 15px;
+        /* Reduz o espaço entre os cards */
+        padding: 10px;
+        /* Reduz o padding para celular */
     }
 
     .Card-Projeto {
-        width: 180px; /* Diminui o tamanho dos cards em telas menores */
+        width: 180px;
+        /* Diminui o tamanho dos cards em telas menores */
     }
 }
 
 /* Ajustes para telas muito pequenas (celulares em retrato) */
 @media (max-width: 480px) {
     .carrossel {
-        padding: 10px 5px; /* Ajusta o padding para telas muito pequenas */
-        gap: 10px; /* Diminui o espaçamento entre os cards */
+        padding: 10px 5px;
+        /* Ajusta o padding para telas muito pequenas */
+        gap: 10px;
+        /* Diminui o espaçamento entre os cards */
     }
 
     .Card-Projeto {
-        width: 150px; /* Ajusta o tamanho dos cards ainda mais para telas pequenas */
+        width: 150px;
+        /* Ajusta o tamanho dos cards ainda mais para telas pequenas */
     }
 }
 
 /* Para telas grandes (desktop) */
 @media (min-width: 1024px) {
     .carrossel {
-        overflow-x: hidden;    /* sem rolagem horizontal em desktop */
+        overflow-x: hidden;
+        /* sem rolagem horizontal em desktop */
         justify-content: center;
         flex-wrap: wrap;
     }
 
     .Card-Projeto {
-        flex: 1 0 250px; /* Flexível, mas com largura mínima de 250px */
-        max-width: 300px; /* Maxima largura de 300px para o card */
+        flex: 1 0 250px;
+        /* Flexível, mas com largura mínima de 250px */
+        max-width: 300px;
+        /* Maxima largura de 300px para o card */
     }
 }
 
@@ -444,7 +531,8 @@ button {
     margin-top: 10px;
 }
 
-button.prev, button.next {
+button.prev,
+button.next {
     position: absolute;
     top: 50%;
     z-index: 10;
@@ -550,15 +638,15 @@ button.next {
 
 /*Skills*/
 
-.skills{
-    text-align: center  ;
+.skills {
+    text-align: center;
     margin-top: 10px;
 
-    
-    
+
+
 }
 
-.skills img{
+.skills img {
     margin-top: 10px;
     gap: 10px;
     width: 52px;
@@ -567,7 +655,7 @@ button.next {
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
-.skills:hover{
+.skills:hover {
     transition: 0.5s;
     cursor: pointer;
 }
@@ -625,18 +713,21 @@ footer {
     gap: 130px;
 }
 
-.numcont, .e-mail {
+.numcont,
+.e-mail {
     margin: 10px 0;
     text-align: right;
     font-size: 10px;
 }
 
-.numcont h3, .e-mail h3 {
+.numcont h3,
+.e-mail h3 {
     font-size: 20px;
     margin-bottom: 5px;
 }
 
-.numcont p, .e-mail p {
+.numcont p,
+.e-mail p {
     font-size: 16px;
 }
 

@@ -11,18 +11,24 @@
 <body>
     <div class="container">
         <!-- Header -->
-     <div class="imagem" id="navbar">
-        <header>
-            <h1>Portifolio</h1>
-            <nav>
-                <ul>
-                    <li><a href="" aria-label="Ir para a página inicial">HOME</a></li>
-                    <li><a href="#projetos" aria-label="Ir para a seção de projetos">PROJETOS</a></li>
-                    <li><a href="#sessao" aria-label="Ir para a seção sobre">SOBRE</a></li>
-                    <li><a href="#Final" aria-label="Ir para a seção de contato">CONTATO</a></li>
-                </ul>
-            </nav>
-        </header>
+        <div class="imagem" id="navbar">
+            <header>
+                <h1>Portifolio</h1>
+
+                <!-- Botão do menu hamburguer -->
+                <input type="checkbox" id="menu-toggle">
+                <label for="menu-toggle" class="menu-icon">&#9776;</label>
+
+                <nav>
+                    <ul class="menu">
+                        <li><a href="">HOME</a></li>
+                        <li><a href="#projetos">PROJETOS</a></li>
+                        <li><a href="#sessao">SOBRE</a></li>
+                        <li><a href="#Final">CONTATO</a></li>
+                    </ul>
+                </nav>
+            </header>
+        </div>
 
         <!--Conhecimento-->
         <div class="about">
@@ -31,149 +37,151 @@
             <h3>Desenvolvedor Front-End</h3>
         </div>
     </div>
-        <!--sessão principal-->
-        <div class="sessao" id="sessao">
-            <img src="Img/Arabesco Png.gif" alt="">
-            <div class="texto">
-                <h1>Sobre Mim</h1>
-                <p>Meu nome é Gustavo Henrique. Sou desenvolvedor <strong>Junior front-end</strong> e estou sempre em
-                    busca de me aperfeiçoar. Meu objetivo é ir além do que é esperado e me dedicar constantemente ao
-                    aprendizado e à evolução no mundo da tecnologia. Atualmente, sou <strong>estudante do 5º período de
-                        Análise e Desenvolvimento de Sistemas</strong> na <strong>Universidade Newton Paiva</strong>,
-                    onde continuo aprimorando meus conhecimentos e habilidades para me tornar um profissional completo.
+    <!--sessão principal-->
+    <div class="sessao" id="sessao">
+        <img src="Img/Arabesco Png.gif" alt="">
+        <div class="texto">
+            <h1>Sobre Mim</h1>
+            <p>Meu nome é Gustavo Henrique. Sou desenvolvedor <strong>Junior front-end</strong> e estou sempre em
+                busca de me aperfeiçoar. Meu objetivo é ir além do que é esperado e me dedicar constantemente ao
+                aprendizado e à evolução no mundo da tecnologia. Atualmente, sou <strong>estudante do 5º período de
+                    Análise e Desenvolvimento de Sistemas</strong> na <strong>Universidade Newton Paiva</strong>,
+                onde continuo aprimorando meus conhecimentos e habilidades para me tornar um profissional completo.
+            </p>
+            <a href="Img/Curriculo atualizado.docx" download><button class="CV">DOWLOAD CV </button> </a>
+
+        </div>
+    </div>
+
+    <!--Tecnologias-->
+
+    <div class="tech" id="tech">
+        <h1>Tecnologias</h1>
+        <article class="Card-front">
+            <img src="Img/Front.png" alt="">
+            <h3>Front-End</h3>
+            <p>Html,Css, Js</p>
+        </article>
+
+        <article class="Card-back">
+            <img src="Img/Front.png" alt="">
+            <h3>Frameworks</h3>
+            <p>React Native, Bootstrap,Typescript</p>
+        </article>
+
+        <article class="Card-front">
+            <img src="Img/Front.png" alt="">
+            <h3>Ferramentas</h3>
+            <p>Github, Git</p>
+        </article>
+    </div>
+
+    <!--Projetos realizados-->
+
+    <div class="projects" id="projetos">
+        <h1>Projetos realizados</h1>
+
+        <!--<button class="prev" onclick="moverCarrossel(-1)">❮</button>-->
+
+        <div class="carrossel"> <!-- Contêiner do carrossel -->
+            <!-- Card 1 -->
+            <article class="Card-Projeto">
+                <div class="imagem" style="background-image: url('Img/ManiaPet.png');"></div>
+                <h4>Mania Pet</h4>
+                <p>Projeto desenvolvido para um e-commerce de vendas de produtos caninos.<br>
+                    Projeto solicitado onde conseguimos selecionar, excluir e editar os produtos selecionados no
+                    carrinho.
                 </p>
-                <a href="Img/Curriculo atualizado.docx" download><button class="CV"  >DOWLOAD CV </button> </a>
+                <button onclick="mostraralerta()">Visualizar Projeto</button>
+            </article>
 
-            </div>
+            <!-- Card 2 -->
+            <article class="Card-Projeto">
+                <div class="imagem" style="background-image: url('Img/biblioteca.png');"></div>
+                <h4>Biblioteca Digital</h4>
+                <p>Projeto desenvolvido para uma biblioteca de livros.<br>
+                    Onde usuário pode realizar a pesquisa, favoritar e excluir livros do seu Gosto.
+                </p>
+                <button onclick="mostraralerta()">Visualizar Projeto</button>
+            </article>
+
+            <!-- Card 3 -->
+            <article class="Card-Projeto">
+                <div class="imagem" style="background-image: url('Img/Jogo\ da\ sorte.png');"></div>
+                <h4>Jogo da Sorte</h4>
+                <p>Jogo simples de sorte, onde utilizei metodo random para embaralhar as cartas<br>
+                    as chances de acerto são de 1 para 3.
+                </p>
+                <button onclick="mostraralerta()">Visualizar Projeto</button>
+            </article>
+
+            <!-- Card 3 -->
+            <article class="Card-Projeto">
+                <div class="imagem" style="background-image: url('Img/Jogo\ da\ sorte.png');"></div>
+                <h4>Jogo da Sorte</h4>
+                <p>Jogo simples de sorte, onde utilizei metodo random para embaralhar as cartas<br>
+                    as chances de acerto são de 1 para 3.
+                </p>
+                <button onclick="mostraralerta()">Visualizar Projeto</button>
+            </article>
+
+            <!-- Card 3 -->
+            <article class="Card-Projeto">
+                <div class="imagem" style="background-image: url('Img/Jogo\ da\ sorte.png');"></div>
+                <h4>Jogo da Sorte</h4>
+                <p>Jogo simples de sorte, onde utilizei metodo random para embaralhar as cartas<br>
+                    as chances de acerto são de 1 para 3.
+                </p>
+                <button onclick="mostraralerta()">Visualizar Projeto</button>
+            </article>
+
+
+            <!-- Card 3 -->
+            <article class="Card-Projeto">
+                <div class="imagem" style="background-image: url('Img/Jogo\ da\ sorte.png');"></div>
+                <h4>Jogo da Sorte</h4>
+                <p>Jogo simples de sorte, onde utilizei metodo random para embaralhar as cartas<br>
+                    as chances de acerto são de 1 para 3.
+                </p>
+                <button onclick="mostraralerta()">Visualizar Projeto</button>
+            </article>
         </div>
 
-        <!--Tecnologias-->
-
-        <div class="tech" id="tech">
-            <h1>Tecnologias</h1>
-            <article class="Card-front">
-                <img src="Img/Front.png" alt="">
-                <h3>Front-End</h3>
-                <p>Html,Css, Js</p>
-            </article>
-
-            <article class="Card-back">
-                <img src="Img/Front.png" alt="">
-                <h3>Frameworks</h3>
-                <p>React Native, Bootstrap,Typescript</p>
-            </article>
-
-            <article class="Card-front">
-                <img src="Img/Front.png" alt="">
-                <h3>Ferramentas</h3>
-                <p>Github, Git</p>
-            </article>
-        </div>
-
-        <!--Projetos realizados-->
-
-        <div class="projects" id="projetos">
-            <h1>Projetos realizados</h1>
-        
-            <!--<button class="prev" onclick="moverCarrossel(-1)">❮</button>-->
-        
-            <div class="carrossel"> <!-- Contêiner do carrossel -->
-                <!-- Card 1 -->
-                <article class="Card-Projeto">
-                    <div class="imagem" style="background-image: url('Img/ManiaPet.png');"></div>
-                    <h4>Mania Pet</h4>
-                    <p>Projeto desenvolvido para um e-commerce de vendas de produtos caninos.<br>
-                        Projeto solicitado onde conseguimos selecionar, excluir e editar os produtos selecionados no carrinho.
-                    </p>
-                    <button onclick="mostraralerta()">Visualizar Projeto</button>
-                </article>
-        
-                <!-- Card 2 -->
-                <article class="Card-Projeto">
-                    <div class="imagem" style="background-image: url('Img/biblioteca.png');"></div>
-                    <h4>Biblioteca Digital</h4>
-                    <p>Projeto desenvolvido para uma biblioteca de livros.<br>
-                        Onde usuário pode realizar a pesquisa, favoritar e excluir livros do seu Gosto.
-                    </p>
-                    <button onclick="mostraralerta()">Visualizar Projeto</button>
-                </article>
-        
-                <!-- Card 3 -->
-                <article class="Card-Projeto">
-                    <div class="imagem" style="background-image: url('Img/Jogo\ da\ sorte.png');"></div>
-                    <h4>Jogo da Sorte</h4>
-                    <p>Jogo simples de sorte, onde utilizei metodo random para embaralhar as cartas<br>
-                        as chances de acerto são de 1 para 3.
-                    </p>
-                    <button onclick="mostraralerta()">Visualizar Projeto</button>
-                </article>
-
-                 <!-- Card 3 -->
-                 <article class="Card-Projeto">
-                    <div class="imagem" style="background-image: url('Img/Jogo\ da\ sorte.png');"></div>
-                    <h4>Jogo da Sorte</h4>
-                    <p>Jogo simples de sorte, onde utilizei metodo random para embaralhar as cartas<br>
-                        as chances de acerto são de 1 para 3.
-                    </p>
-                    <button onclick="mostraralerta()">Visualizar Projeto</button>
-                </article>
-
-                 <!-- Card 3 -->
-                 <article class="Card-Projeto">
-                    <div class="imagem" style="background-image: url('Img/Jogo\ da\ sorte.png');"></div>
-                    <h4>Jogo da Sorte</h4>
-                    <p>Jogo simples de sorte, onde utilizei metodo random para embaralhar as cartas<br>
-                        as chances de acerto são de 1 para 3.
-                    </p>
-                    <button onclick="mostraralerta()">Visualizar Projeto</button>
-                </article>
-
-
-                 <!-- Card 3 -->
-                 <article class="Card-Projeto">
-                    <div class="imagem" style="background-image: url('Img/Jogo\ da\ sorte.png');"></div>
-                    <h4>Jogo da Sorte</h4>
-                    <p>Jogo simples de sorte, onde utilizei metodo random para embaralhar as cartas<br>
-                        as chances de acerto são de 1 para 3.
-                    </p>
-                    <button onclick="mostraralerta()">Visualizar Projeto</button>
-                </article>
-            </div>
-        
         <!--<button class="next" onclick="moverCarrossel(1)">❯</button>-->
-        </div>
-        
+    </div>
 
-        <div class="skills">
-            <img height="20" alt="GIF" src="Img/skills.gif"/>&nbsp;Linguagens e ferramentas mais utilizadas:
 
-            <div class="ferramentas-linguagens">
-                <img src="Img/icon react.png" alt="">
-                <img src="Img/html.svg" alt="">
-                <img src="Img/css.svg" alt="">
-                <img src="Img/js.png" alt="">
-                <img src="Img/visualstudiocode.png" alt="">
-            </div>
+    <div class="skills">
+        <img height="20" alt="GIF" src="Img/skills.gif" />&nbsp;Linguagens e ferramentas mais utilizadas:
 
+        <div class="ferramentas-linguagens">
+            <img src="Img/icon react.png" alt="">
+            <img src="Img/html.svg" alt="">
+            <img src="Img/css.svg" alt="">
+            <img src="Img/js.png" alt="">
+            <img src="Img/visualstudiocode.png" alt="">
         </div>
 
-        <!--Footer-->
-        <div class="Final" id="Final">
-            <h1>Contatos</h1>
-            <footer>
-                <div class="contatos">
-                    <div class="social-icons">
-                        <a href="gustavo22532@gmail.com"><img src="Img/gmail.webp" alt=""></a>
-                        <a href="https://github.com/gustavosantt"><img src="Img/github.png" alt="Github"></a>
-                        <a href="https://www.linkedin.com/in/gustavo-henrique-61a895215/"><img src="Img/linkedin.png" alt="LinkedIn"></a>
-                    </div>
+    </div>
+
+    <!--Footer-->
+    <div class="Final" id="Final">
+        <h1>Contatos</h1>
+        <footer>
+            <div class="contatos">
+                <div class="social-icons">
+                    <a href="gustavo22532@gmail.com"><img src="Img/gmail.webp" alt=""></a>
+                    <a href="https://github.com/gustavosantt"><img src="Img/github.png" alt="Github"></a>
+                    <a href="https://www.linkedin.com/in/gustavo-henrique-61a895215/"><img src="Img/linkedin.png"
+                            alt="LinkedIn"></a>
                 </div>
-            </footer>
-            <p>©2025 Gustavo Henrique,  Todos os direitos reservados </p> 
-            </div>             
-        </div>
-        
-    </div> 
+            </div>
+        </footer>
+        <p>©2025 Gustavo Henrique, Todos os direitos reservados </p>
+    </div>
+    </div>
+
+    </div>
     <script src="homescreen.js"></script>
 </body>
 
