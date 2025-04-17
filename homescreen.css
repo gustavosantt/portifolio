@@ -546,6 +546,33 @@ button.next {
     }
 }
 
+
+
+/*Skills*/
+
+.skills{
+    text-align: center  ;
+    margin-top: 10px;
+
+    
+    
+}
+
+.skills img{
+    margin-top: 10px;
+    gap: 10px;
+    width: 52px;
+    height: 52px;
+    transform: translateY(-5px);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.skills:hover{
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+
 /* Footer */
 .Final {
     margin-top: 100px;
