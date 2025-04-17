@@ -271,7 +271,7 @@ nav li:hover {
         transform: translateY(0);
     }
     50%{
-        transform: translateY(-50px);
+        transform: translateY(-20px);
     }
 }
 
