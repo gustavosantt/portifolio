@@ -135,8 +135,9 @@ nav li:hover {
     padding: 80px;
     gap: 10px;
     font-family: 'Roboto', sans-serif;
+
     /*background: linear-gradient(to bottom right, #061621 70%, #F5F5DC);*/
-    background: url(Img/Computer\ Code\ GIF\ -\ Computer\ Code\ Decrypting\ -\ Discover\ &\ Share\ GIFs.gif);
+    background: url(Img/fundohader.jfif);
     width: 100%;
     color: rgb(253, 250, 250);
     filter: brightness(0.6);
@@ -150,7 +151,7 @@ nav li:hover {
 
 .about span::before{
     content: "";
-    color: #ff007b;
+    color: white;
     animation: about 10s infinite;
 }
 
@@ -162,9 +163,26 @@ nav li:hover {
     right: -10px;
     animation: cursor .8s infinite, digita 30s steps(80) infinite;
     width: calc(100% + 15px);
-    background-color: #212121;
+    background-color: transparent;
     
 }
+
+/* Responsividade para telas pequenas */
+@media (max-width: 480px) {
+    .about {
+        padding: 10px;
+        font-size: 18px;
+    }
+
+    .about span {
+        width: 100%;
+        max-width: 250px;
+    }
+
+
+}
+
+
 
 @keyframes digita {
 
