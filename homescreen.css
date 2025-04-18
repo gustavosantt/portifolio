@@ -109,7 +109,7 @@ nav li:hover {
 
     .menu-icon {
         display: block;
-        color: rgb(228, 222, 222);
+        color: rgb(0, 0, 0);
     }
 
     nav ul li {
@@ -171,7 +171,7 @@ nav li:hover {
 @media (max-width: 480px) {
     .about {
         padding: 10px;
-        font-size: 30px;
+    
     }
 
     .about span {
