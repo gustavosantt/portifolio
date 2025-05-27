@@ -76,6 +76,11 @@ nav li:hover {
 }
 
 /* Ícone do menu hamburguer (esconde no desktop) */
+
+.menu{
+    transition: max-height 0.5s ease-in-out;
+}
+
 .menu-icon {
     display: none;
     font-size: 30px;
