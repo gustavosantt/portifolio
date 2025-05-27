@@ -92,6 +92,12 @@ nav ul.menu {
   z-index: 1;
 }
 
+#menu-toggle:checked ~ nav ul.menu {
+  max-height: 500px; /* altura suficiente para todos os links */
+  padding: 10px 0;
+}
+
+
 .menu-icon {
     display: none;
     font-size: 30px;
