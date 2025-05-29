@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const targetElement = document.querySelector(targetID);
         if (targetElement) {
           const targetPosition = targetElement.offsetTop;
-          smoothScrollTo(targetPosition, 1200); // ajuste a duração como quiser
+          smoothScrollTo(targetPosition, 2200); // ajuste a duração como quiser
         }
       });
     });
